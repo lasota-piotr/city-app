@@ -140,14 +140,14 @@ article p {
 }
 
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 300px) and (min-height: 300px) {
   .container {
-    font-size: 1em;
+    font-size: .95em;
   }
 }
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) and (min-height: 400px){
   .container {
     font-size: 1.4em;
   }
