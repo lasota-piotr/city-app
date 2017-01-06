@@ -8,7 +8,6 @@
   flex-flow: wrap;
   font-family: 'Catamaran', sans-serif;
   color: #222;
-  font-size: 0.7em;
 }
 
 header {
@@ -17,7 +16,6 @@ header {
   justify-content: flex-end;
   align-items: flex-end; 
   width: 100%;
-  height: 100vh;
   background:
     linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)),
     url("../img/SEATTLE-CITY.jpg") 
@@ -31,10 +29,9 @@ header {
 }
 
 .header-content h1 {
-  font-size: 6em;
+  font-size: 4em;
   font-weight: 700;
-
-  margin-bottom: 5%;
+  margin-bottom: .02em;
 }
 
 .header-content hr {
@@ -91,11 +88,11 @@ article::after {
 article h2, 
 article span, 
 article p {
-  width: 65%;
+  width: 85%;
 }
 
 article h2 {
-  margin: .6em 0 .2em;
+  margin: 1em 0 .2em;
   font-weight: 400;
   font-size: 2.1em;
   font-weight: 600;
@@ -139,35 +136,29 @@ article p {
   height: 100%;
 }
 
-
-@media screen and (min-width: 300px) and (min-height: 300px) {
-  .container {
-    font-size: .95em;
+@media screen and (orientation: portrait) {
+  header {
+    height: 100vh;
   }
 }
 
-
-@media screen and (min-width: 600px) and (min-height: 400px){
+@media screen and (min-width: 330px) {
   .container {
-    font-size: 1.4em;
+    font-size: 1.3em;
+  }
+
+  .header-content h1 {
+    font-size: 4.5em;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    font-size: 1.8em;
   }
 }
 
 @media screen and (min-width: 810px) and (min-height: 550px) {
-  .container {
-    flex-wrap: nowrap;
-    width: 130vh;
-    border-radius: .9em;
-    overflow: hidden;
-    font-size: 1.7vh;
-  }
-  header {
-    height: auto;
-  }
-  section {
-    flex-shrink: 2;
-  }
-
   body {
     height: 100vh;
     display: flex;
@@ -177,5 +168,31 @@ article p {
       linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, 0.8)),
       url("../img/SEATTLE-CITY.jpg")
       top / cover;
+  }
+
+  .container {
+    flex-wrap: nowrap;
+    width: 130vh;
+    border-radius: .9em;
+    overflow: hidden;
+    font-size: 1.9vmin;
+  }
+
+  header {
+    height: auto;
+  }
+
+  .header-content h1 {
+    font-size: 6em;
+  }
+
+  section {
+    flex-shrink: 2;
+  }
+
+  article h2, 
+  article span, 
+  article p {
+    width: 65%;
   }
 }
